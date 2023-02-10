@@ -13,17 +13,19 @@ class CallbackTest {
 
 
     @Test
-    void shouldTestSomething() throws InterruptedException {
-    open ("http://localhost:9999/");
-    $(("[data-test-id=name] input")).setValue("Иванов Василий");
-    $(("[data-test-id=phone] input")).setValue("+79009990909");
-    $(("[data-test-id=agreement]")).click();
-    $(By.className("button__text")).click();
-    //$(By.cssSelector("alert-succes").shouldHave(exactText("  Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
+    void shouldTestSomething()  {
+        open("http://localhost:9999/");
+        $("[data-test-id=name] input").setValue("Иванов Василий");
+        $("[data-test-id=phone] input").setValue("+79009990909");
+        $("[data-test-id=agreement]").click();
+        $(By.className("button__text")).click();
         $(By.tagName("p")).shouldHave(exactText("  Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
+        //$(By.cssSelector("alert-succes").shouldHave(exactText("  Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
+       // $(By.tagName("p")).shouldHave(exactText("  Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
 
 
 
-        }
+    }
+
 }
 
