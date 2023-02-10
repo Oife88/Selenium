@@ -20,8 +20,7 @@ class CallbackTest {
         $("[data-test-id=agreement]").click();
         $(By.className("button__text")).click();
         $(By.tagName("p")).shouldHave(exactText("  Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
-        //$(By.cssSelector("alert-succes").shouldHave(exactText("  Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
-       // $(By.tagName("p")).shouldHave(exactText("  Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
+
 
 
 
